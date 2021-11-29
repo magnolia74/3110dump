@@ -1,0 +1,69 @@
+
+# DO NOT RUN THE CODE. You can edit you want, but the owner of the said project don't care about the code. 
+import csv
+
+
+f = open("boxscorelions.csv", "r") 
+print (f.read())
+
+fantasypts = 0
+
+print("Fantasy Football - Detroit Lions") 
+print("Please Enter the Player's name (Lions): ") 
+class score: 
+	
+	def get_stats(player):
+		playersearch = boxscorelions.find(player, passing, rushing, receiving, kicking team=None)  
+		if player == []" 
+			return False
+		player = playersearch[0] 
+	
+	def standard_pts(player): 
+		player_stats = get_stats(player, passing, rushing, receiving, kicking) 
+		if player_stats == False: 
+			return False
+		fantasypts={}
+		
+		for x in player_stats: 
+			fantasypts[x]= {}
+			
+		for x in player_stats: 
+			fantasypts[x]['passing_c'] = int(player_stats[x]['passing_c']*1) 
+			fantasypts[x]['passing_yds'] = int (player_stats[x]['passing_yds']/20 * 1)
+			fantasypts[x]['passing_TD'] = player_stats[x]['passing_TD']* 4.5
+			fantasypts[x]['rushing_yds'] = player_stats[x]['rushing_yds'] * .1
+			fantasypts[x]['rushing_TD'] = int(player_stats[x]['rushing_TD']*6) 
+			fantasypts[x]['receiving_yds'] = player_stats[x]['receiving_yds'] * .1
+			fantasypts[x]['receiving_TD'] = int(player_stats[x]['receiving_TD'] * 6) 
+			fantasypts[x]['kicking_FG'] = int(player_stats[x]['kicking_FG'] * 3) 
+			fantasypts[x]['kicking_Pct'] = int(player_stats[x]['kicking_Pct'] * 1) 
+	def penalty(player): 
+		player_stats = get_stats(player, passing, rushing, receiving, kicking) 
+		if player_stats == False: 
+			return False
+		fantasypts={}
+		
+		for x in player_stats: 
+			fantasypts[x]['passing_int'] = player_stats[x]['passing_int'] - .5
+			fantasypts[x]['kicking_mfg'] = player_stats[x]['kicking_mfg'] - .4
+			
+	def bonus_points(player): 
+		player_stats = get_stats(player, passing, rushing, receiving, kicking) 
+		if player_stats == False: 
+			return False
+		fantasypts={}
+		
+		for x in player_stats: 
+			fantasypts[x]['rushing_avg'] = player_stats[x]['rushing_avg'] * 2
+			fantasypts[x]['kicking_LFG'] = player_stats[x]['kicking_LFG'] * 2 
+			
+	def total_points(fantasypts): 
+		total_points = {} 
+		fantasytotal = 0
+		for x in fantasypts: 
+			total_points[x]={}
+			total_points[x] = fantasytotal
+		return fantasytotal
+	def output(): 
+		print(player, "'s fantasy score is: ", fantasytotal) 
+

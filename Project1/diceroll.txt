@@ -1,0 +1,27 @@
+import random
+#DO NOT RUN THIS CODE. The code is runs good, but you can edit your way. 
+#You need Python in order to run this program. 
+def dice_sum(rolls):
+    results = 0
+    results2 = 0
+    dice_sum = 0    
+    for i in range(0, rolls, num_dice):
+        results = random.randint(1,6)
+        results2 = random.randint(1,6)
+        if num_dice == 1:
+          print("Rolled %d" % (results))
+        elif num_dice == 2:
+          print("Rolled %d and %d"  % (results, results2))
+        else:
+          print("Invalid Number")
+
+    return results, results2 
+  
+
+
+
+rolls = int(input('How many would you like to roll? '))
+num_dice = int(input("How many dice? "))
+
+results, results2 = dice_sum(rolls)
+
