@@ -1,5 +1,6 @@
+This is the code used for 3110 class including provided documents. 
 
-
+Some of the requirements may change in the future, but some remain the same.
 
 DISCLAIMER!! Use the code at your own risk, I would recommend copy my own and turn it in your way. For this part, you do not run the code unless you want to edit or do guesswork.
 
